@@ -30,7 +30,6 @@ export class AppComponent implements OnInit {
   updateValue() {
     if (this.exchanges) {
       this.value = +this.value;
-      const selectedRate = this.exchanges.rates[this.selectedCurrency];
       this.valueMulti = {};
   
       for (const divisa of Object.keys(this.exchanges.rates)) {
@@ -43,5 +42,7 @@ export class AppComponent implements OnInit {
       });
     }
   }
+
+
 }
 
